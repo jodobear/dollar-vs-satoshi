@@ -1,0 +1,57 @@
+{
+  "name": "dollar-vs-satoshi",
+  "version": "0.0.1",
+  "description": "Fun micro betting game over the Lightning Network",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "buildDev": "webpack-dev-server --mode development",
+    "buildProd": "webpack-dev-server --mode production",
+    "build": "webpack --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jodobear/dollar-vs-satoshi.git"
+  },
+  "keywords": [
+    "dollar",
+    "vs",
+    "satoshi",
+    "bitcoin",
+    "lightning",
+    "network"
+  ],
+  "author": "jodobear",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jodobear/dollar-vs-satoshi/issues"
+  },
+  "homepage": "https://github.com/jodobear/dollar-vs-satoshi#readme",
+  "devDependencies": {
+    "@babel/core": "^7.7.2",
+    "@babel/preset-env": "^7.7.1",
+    "@babel/preset-react": "^7.7.0",
+    "babel-loader": "^8.0.6",
+    "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^3.2.0",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.8.0",
+    "node-sass": "^4.13.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "sass-loader": "^8.0.0",
+    "terser-webpack-plugin": "^2.2.1",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.9.0"
+  },
+  "dependencies": {
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      "@babel/react"
+    ]
+  }
+}
