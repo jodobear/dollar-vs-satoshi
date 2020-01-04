@@ -45,8 +45,16 @@
     "webpack-dev-server": "^3.9.0"
   },
   "dependencies": {
+    "bcrypt": "3.0.7",
+    "bolt11": "1.2.6",
+    "dotenv": "8.2.0",
+    "esm": "3.2.25",
+    "express": "4.17.1",
+    "mongoose": "5.7.12",
+    "node-fetch": "2.6.0",
     "react": "^16.12.0",
-    "react-dom": "^16.12.0"
+    "react-dom": "^16.12.0",
+    "socket.io": "2.3.0"
   },
   "babel": {
     "presets": [
