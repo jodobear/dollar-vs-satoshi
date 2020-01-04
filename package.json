@@ -1,7 +1,7 @@
 {
   "name": "dollar-vs-satoshi",
   "version": "0.0.1",
-  "description": "Fun micro betting game over the Lightning Network",
+  "description": "The Dollar vs Satoshi showdown",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -39,7 +39,7 @@
     "node-sass": "^4.13.0",
     "optimize-css-assets-webpack-plugin": "^5.0.3",
     "sass-loader": "^8.0.0",
-    "terser-webpack-plugin": "^2.2.1",
+    "terser-webpack-plugin": "2.3.1",
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.10",
     "webpack-dev-server": "^3.9.0"
@@ -47,6 +47,7 @@
   "dependencies": {
     "bcrypt": "3.0.7",
     "bolt11": "1.2.6",
+    "coingecko-api": "1.0.8",
     "dotenv": "8.2.0",
     "esm": "3.2.25",
     "express": "4.17.1",
@@ -54,7 +55,8 @@
     "node-fetch": "2.6.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "socket.io": "2.3.0"
+    "socket.io": "2.3.0",
+    "store": "2.0.12"
   },
   "babel": {
     "presets": [

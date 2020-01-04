@@ -1,1 +1,0 @@
-alert("Dollar vs Satoshi")

@@ -1,7 +1,6 @@
 const path = require('path');
-
-const { CleanWebpackPlugin } = require(`clean-webpack-plugin`); // this needs to be initialized like so. Comment it out once you have assets/modifications in dist directory else it'll wipe them out with every build.
-
+// the CleanWebpackPlugin needs to be initialized like so. Comment it out once you have assets/modifications in dist directory else it'll wipe them out with every build.
+const { CleanWebpackPlugin } = require(`clean-webpack-plugin`);
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
