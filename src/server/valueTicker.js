@@ -1,4 +1,6 @@
 import store from "store"
+
+import { Bet } from "./schemas"
 import {getCurrentBTCValue} from "./helpers";
 
 const valueTicker = async (io) => {

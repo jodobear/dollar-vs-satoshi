@@ -39,8 +39,8 @@ const socketEvent = (socket) => {
             const placedBet = store.get("placedBet");
             const newBet = new Bet({
                 startValue: store.get("currentValue"),
-                betDirection: direction,
-                betAmount: amount,
+                direction: direction,
+                amount: amount,
                 player: user,
                 endValue: 0,
             });
@@ -64,4 +64,18 @@ const socketEvent = (socket) => {
             socket.emit("Not enough balance")
         }
     });
+
+    socket.on("newDeposit", (amount, userId) => {
+        if (amount > 50000) {
+            socket.emit("Deposit amount exceeded max of 50,000 sats.");
+            return;
+        }
+        // implement BTCPay c-lightning create charge logic here.
+    })
+    socket.on("newWithdrawal", async (bolt11, userId) => {
+        const user = await User.findById(userId);
+        if (lightningPayReq.bolt11.decode(bolt11).satoshis <= user.userBalance) {
+            // implement BTCPay c-lightning withdrawal logic here.
+        }
+    })
 }

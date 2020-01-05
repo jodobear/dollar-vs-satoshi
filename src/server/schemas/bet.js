@@ -3,7 +3,7 @@ import mongoose from "mongoose"
 const Schema = mongoose.Schema;
 
 const betSchema = new Schema({
-    betAmount: {
+    amount: {
         type: Number,
         required: true
     },
@@ -15,7 +15,7 @@ const betSchema = new Schema({
         type: Number,
         required: true
     },
-    betDirection: {
+    direction: {
         type: String,
         required: true
     },

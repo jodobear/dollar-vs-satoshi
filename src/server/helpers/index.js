@@ -1,8 +1,8 @@
 import bcrypt from "bcrypt"
 import fetch from "node-fetch"
+import store from "store"
 
 import { User, Bet, Withdraw } from "../schemas"
-import store from "store"
 
 export const findUser = async (givenKey) => {
     const [name, key] = givenKey.split('-');
@@ -18,7 +18,7 @@ export const findUser = async (givenKey) => {
 
 export const settleBet = (bet, socket) => {
     let didWin = false;
-    bet.endValue = store.get("currentValue")
+    bet.endValue = store.get("currentValue");
     switch (bet.direction) {
         case "up":
             if (bet.endValue > bet.startValue) {
@@ -27,7 +27,7 @@ export const settleBet = (bet, socket) => {
             }
             break;
         case "equal":
-            if (bet.endValue == bet.startValue) {
+            if (bet.endValue === bet.startValue) {
                 updateBalance(socket, bet.player._id, bet.amount * 3);
                 didWin = true;
             }
@@ -53,12 +53,12 @@ export const updateBalance = async (io, userKey, amount) => {
     await user.save();
     io.emit('Balance updated for user: ', userKey, "\n",
         "Current balance = ", user.userBalance);
-}
+};
 
 export const getUserFromWithdrawId = async(withdrawId) => {
     const withdrawalRecord = await Withdraw.find({withdrawalId: withdrawId});
     return withdrawalRecord[0].userId;
-}
+};
 
 export const getCurrentBTCValue = async () => {
     try {
