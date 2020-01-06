@@ -1,0 +1,36 @@
+/*.tab-content{*/
+/*  height: 100%;*/
+/*}*/
+.tab-content{
+  height: 80%;
+  padding: 20px;
+}
+.nav-tabs{
+  border-bottom: 2px solid white;
+  font-size:20px;
+  font-family: 'Roboto', sans-serif;
+}
+.nav-link.active{
+  color: #4ECCA3 !important;
+  background-color: transparent !important;
+  border: none !important;
+  border-bottom: 2px solid #4ECCA3 !important;
+  margin-bottom: -2px;
+}
+.nav-link:hover{
+  background-color: transparent !important;
+  border: none !important;
+  border-bottom: 2px solid #4ECCA3 !important;
+  margin-bottom: -2px;
+}
+.nav-link{
+  color: white !important;
+  border: none !important;
+  font-weight: bold;
+}
+.tab-pane{
+  height: 100%;
+}
+body{
+  background-color: #393E46
+}
