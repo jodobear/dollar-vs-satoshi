@@ -45,7 +45,7 @@
     "webpack-dev-server": "^3.9.0"
   },
   "dependencies": {
-    "bcrypt": "3.0.7",
+    "bcrypt": "5.0.0",
     "bolt11": "1.2.6",
     "coingecko-api": "1.0.8",
     "dotenv": "8.2.0",
